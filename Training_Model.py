@@ -19,6 +19,8 @@ model = models.Model(inputs=base_model.input, outputs=output)
 # Compile the model
 model.compile(optimizer=optimizers.Adam(learning_rate=0.0001), loss='categorical_crossentropy', metrics=['accuracy'])
 
+model.summary()
+
 # Data augmentation
 train_datagen = ImageDataGenerator(
     rescale=1.0 / 255,
